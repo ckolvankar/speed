@@ -66,9 +66,6 @@ def test_internet_speed():
         latency1 = measure_ping_latency(target_host)
 
         
-        with open('document1.csv','a') as fd:
-            order_csv_append = csv.writer(fd)
-            order_csv_append.writerow([formatted_date,latency1, download_speed_mbps,upload_speed_mbps])
     except speedtest.SpeedtestException as e:
         print(f"An error occurred during the speed test: {e}")
     except Exception as e:
